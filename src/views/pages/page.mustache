@@ -1,0 +1,35 @@
+{{>partials/header}}
+
+{{#banner}}
+<section class="banner">
+    <h3 class="banner--title">{{title}}</h3>
+    <div class="banner-desc">
+        <p class="banner--text">Aqui na PetFood, estamos sempre à procura de novas famílias para nossos animais. Nossa equipe de adoção está aqui para ajudar você a selecionar um novo membro da família.</p>
+        <a class="banner--buttom">Agendar Visita</a>
+    </div>
+   
+</section>
+<h2>{{title}} disponíveis para adoção</h2>
+{{/banner}}
+
+<div class="container list">
+
+    {{#list}}
+        <div class="item">
+            <img src="images/{{ image }}" class="item--image" />
+            <div class="item--desc">
+                <div class="item--name">{{ name }}</div>
+                <div class="item--color">Cor: {{ color }}</div>
+                <div class="item--genre">Gênero: {{ sex }}</div>
+            </div>
+            
+        </div>
+    {{/list}}
+    
+</div>
+
+{{^list}}
+<h2>Não há animais disponiveis nessa condições</h2>
+{{/list}}
+
+{{>partials/footer}}
